@@ -84,4 +84,5 @@ def predict(user_id):
 
 # start the flask app, allow remote connections
 if __name__ == '__main__':
-    app.run(port = 5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(port = port, debug=True)
