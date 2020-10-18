@@ -1,4 +1,0 @@
-gunicorn --bind 0.0.0.0 app:app
-
-output = requests.get("http://localhost:8000/",  
-                       params = { 'msg': 'Hello from Gunicorn' })
