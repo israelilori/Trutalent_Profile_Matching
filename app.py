@@ -23,7 +23,7 @@ cred = credentials.Certificate({
   "type": os.environ['type'],
   "project_id": os.environ['project_id'],
   "private_key_id": os.environ['private_key_id'],
-  "private_key": os.environ['private_key'],
+  "private_key": os.environ['private_key'].replace('\\n', '\n'),
   "client_id": os.environ['client_id'],
   "auth_uri": os.environ['auth_uri'],
   "client_email": os.environ['client_email'],
