@@ -19,8 +19,7 @@ app = Flask(__name__)
 
 #Use a service account to connect to the database
 
-cred = credentials.ApplicationDefault()
-firebase_admin.initialize_app(cred, {
+cred = credentials.Certificate({
   "type": os.environ['type'],
   "project_id": os.environ['project_id'],
   "private_key_id": os.environ['private_key_id'],
@@ -31,7 +30,7 @@ firebase_admin.initialize_app(cred, {
   "auth_provider_x509_cert_url": os.environ['auth_provider_x509_cert_url'],
   "client_x509_cert_url": os.environ['client_x509_cert_url']
 })
-
+firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 
