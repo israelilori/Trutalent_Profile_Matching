@@ -35,11 +35,11 @@ firebase_admin.initialize_app(cred, {
 db = firestore.client()
 
 
-# routes
-#@app.route('/')
+#routes
+@app.route('/')
 #define function to connect to the database
-#def home():
- #   return render_template('#index page')
+def home():
+    return 'Hello'
 
 
 #define function to predict and return the final page after prediction occurs
