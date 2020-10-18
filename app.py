@@ -26,6 +26,7 @@ cred = credentials.Certificate({
   "private_key": os.environ['private_key'],
   "client_id": os.environ['client_id'],
   "auth_uri": os.environ['auth_uri'],
+  "client_email": os.environ['client_email'],
   "token_uri": os.environ['token_uri'],
   "auth_provider_x509_cert_url": os.environ['auth_provider_x509_cert_url'],
   "client_x509_cert_url": os.environ['client_x509_cert_url']
